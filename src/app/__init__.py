@@ -1,7 +1,7 @@
 from flask import Flask
-from app.config import Config
-from app.extensions import api as rest_api
-from app.api import api_bp
+from src.app.config import Config
+from src.app.extensions import api as rest_api
+from src.app.api import api_bp
 
 
 # アプリケーションファクトリ関数

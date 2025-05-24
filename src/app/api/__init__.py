@@ -1,6 +1,6 @@
 from flask import Blueprint
-from app.extensions import api
-from app.api.namespace import register_namespaces
+from src.app.extensions import api
+from src.app.api.namespace import register_namespaces
 
 # 'api' という名前でBlueprintオブジェクトを作成。
 # このブループリント内のルートはすべて '/api' というURLプレフィックスを持つ。

@@ -1,4 +1,4 @@
-from app.api.v1.endpoints.chat import ns as chat_ns
+from src.app.api.v1.endpoints.chat import ns as chat_ns
 
 
 def register_namespaces(api):

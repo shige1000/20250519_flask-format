@@ -1,0 +1,28 @@
+version: "3.9"
+
+services:
+  app:
+    container_name: al-assistant-be
+    build:
+      context: ../..
+      dockerfile: docker/local/be/Dockerfile
+    # environment:
+    #   DB_HOST: db
+    #   DB_NAME: al_assistant_db
+    #   DB_USER: user
+    #   DB_PASSWORD: password
+    #   DB_PORT: 3306
+    volumes:
+      - "../../src:/src"
+    ports:
+      - "8000:5000"
+    # depends_on:
+    #   - db
+    networks:
+      - al-assistant-network
+
+networks:
+  al-assistant-network:
+    driver: bridge
+    external: true
+    name: al-assistant-project_al-assistant-network
